@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010EBD0425C28FAE00A898FA /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010EBD0325C28FAE00A898FA /* DashboardViewModel.swift */; };
+		015F161225C08CA60033C521 /* prevWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F161125C08CA60033C521 /* prevWorkoutTableViewCell.swift */; };
+		015F161725C0960E0033C521 /* prevWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F161625C0960E0033C521 /* prevWorkout.swift */; };
+		015F161C25C096160033C521 /* prevWorkout.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015F161B25C096160033C521 /* prevWorkout.xib */; };
 		016DFB2225BFCD4C00EB8E9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016DFB2125BFCD4C00EB8E9F /* AppDelegate.swift */; };
 		016DFB2425BFCD4C00EB8E9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016DFB2325BFCD4C00EB8E9F /* SceneDelegate.swift */; };
 		016DFB2625BFCD4C00EB8E9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016DFB2525BFCD4C00EB8E9F /* ViewController.swift */; };
@@ -16,6 +20,26 @@
 		016DFB3125BFCD4F00EB8E9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016DFB2F25BFCD4F00EB8E9F /* LaunchScreen.storyboard */; };
 		016DFB3C25BFCD4F00EB8E9F /* WaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016DFB3B25BFCD4F00EB8E9F /* WaveTests.swift */; };
 		016DFB4725BFCD4F00EB8E9F /* WaveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016DFB4625BFCD4F00EB8E9F /* WaveUITests.swift */; };
+		016DFB5925BFCFFB00EB8E9F /* Como-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 016DFB5825BFCFFB00EB8E9F /* Como-Bold.ttf */; };
+		016DFB5E25BFD00600EB8E9F /* Como-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 016DFB5D25BFD00600EB8E9F /* Como-Light.ttf */; };
+		016DFB6325BFD01000EB8E9F /* Como-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 016DFB6225BFD01000EB8E9F /* Como-Medium.ttf */; };
+		016DFB6825BFD01800EB8E9F /* Como-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 016DFB6725BFD01800EB8E9F /* Como-SemiBold.ttf */; };
+		016DFB6D25BFD23D00EB8E9F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016DFB6C25BFD23D00EB8E9F /* Colors.swift */; };
+		0173AA2D25C0C068002BBC57 /* barCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173AA2C25C0C068002BBC57 /* barCollectionViewCell.swift */; };
+		0173AA3325C10EEF002BBC57 /* totalWorkouts.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0173AA3225C10EEF002BBC57 /* totalWorkouts.xib */; };
+		0173AA3825C10EFF002BBC57 /* totalWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173AA3725C10EFF002BBC57 /* totalWorkouts.swift */; };
+		0173AA3D25C10F1A002BBC57 /* totalWorkoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173AA3C25C10F1A002BBC57 /* totalWorkoutCollectionViewCell.swift */; };
+		0173AA4225C10F2B002BBC57 /* totalWorkoutCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0173AA4125C10F2B002BBC57 /* totalWorkoutCollectionViewCell.xib */; };
+		0173AA4725C23951002BBC57 /* finWorkoutNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0173AA4625C23951002BBC57 /* finWorkoutNib.xib */; };
+		0173AA4C25C23A22002BBC57 /* finWorkoutNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173AA4B25C23A22002BBC57 /* finWorkoutNib.swift */; };
+		0173AA5225C281DD002BBC57 /* progressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173AA5125C281DD002BBC57 /* progressCell.swift */; };
+		0173AA5A25C281E9002BBC57 /* progressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0173AA5925C281E9002BBC57 /* progressCell.xib */; };
+		0197755225BFD603009AAC14 /* thisWeek.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0197755125BFD603009AAC14 /* thisWeek.xib */; };
+		0197755A25BFD612009AAC14 /* thisWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0197755925BFD612009AAC14 /* thisWeek.swift */; };
+		01C0A12225C09E9D0063058F /* finWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C0A12125C09E9D0063058F /* finWorkoutTableViewCell.swift */; };
+		1FA64C6AD0BEE7DA3EAEF362 /* Pods_Wave_WaveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324FFCA0FC6426FF025D6A45 /* Pods_Wave_WaveUITests.framework */; };
+		84F5ED6C576E24AF469FE447 /* Pods_Wave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B996BED5FAF00EFFE7316E2C /* Pods_Wave.framework */; };
+		D411A987D7E38ED3695E6C14 /* Pods_WaveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92524DD3392DAD9768AF227A /* Pods_WaveTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +60,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010EBD0325C28FAE00A898FA /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		015F161125C08CA60033C521 /* prevWorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prevWorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		015F161625C0960E0033C521 /* prevWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prevWorkout.swift; sourceTree = "<group>"; };
+		015F161B25C096160033C521 /* prevWorkout.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = prevWorkout.xib; sourceTree = "<group>"; };
 		016DFB1E25BFCD4C00EB8E9F /* Wave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		016DFB2125BFCD4C00EB8E9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		016DFB2325BFCD4C00EB8E9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +79,32 @@
 		016DFB4225BFCD4F00EB8E9F /* WaveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		016DFB4625BFCD4F00EB8E9F /* WaveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveUITests.swift; sourceTree = "<group>"; };
 		016DFB4825BFCD4F00EB8E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		016DFB5825BFCFFB00EB8E9F /* Como-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Como-Bold.ttf"; sourceTree = "<group>"; };
+		016DFB5D25BFD00600EB8E9F /* Como-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Como-Light.ttf"; sourceTree = "<group>"; };
+		016DFB6225BFD01000EB8E9F /* Como-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Como-Medium.ttf"; sourceTree = "<group>"; };
+		016DFB6725BFD01800EB8E9F /* Como-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Como-SemiBold.ttf"; sourceTree = "<group>"; };
+		016DFB6C25BFD23D00EB8E9F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0173AA2C25C0C068002BBC57 /* barCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barCollectionViewCell.swift; sourceTree = "<group>"; };
+		0173AA3225C10EEF002BBC57 /* totalWorkouts.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = totalWorkouts.xib; sourceTree = "<group>"; };
+		0173AA3725C10EFF002BBC57 /* totalWorkouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totalWorkouts.swift; sourceTree = "<group>"; };
+		0173AA3C25C10F1A002BBC57 /* totalWorkoutCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totalWorkoutCollectionViewCell.swift; sourceTree = "<group>"; };
+		0173AA4125C10F2B002BBC57 /* totalWorkoutCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = totalWorkoutCollectionViewCell.xib; sourceTree = "<group>"; };
+		0173AA4625C23951002BBC57 /* finWorkoutNib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = finWorkoutNib.xib; sourceTree = "<group>"; };
+		0173AA4B25C23A22002BBC57 /* finWorkoutNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finWorkoutNib.swift; sourceTree = "<group>"; };
+		0173AA5125C281DD002BBC57 /* progressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progressCell.swift; sourceTree = "<group>"; };
+		0173AA5925C281E9002BBC57 /* progressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = progressCell.xib; sourceTree = "<group>"; };
+		0197755125BFD603009AAC14 /* thisWeek.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = thisWeek.xib; sourceTree = "<group>"; };
+		0197755925BFD612009AAC14 /* thisWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thisWeek.swift; sourceTree = "<group>"; };
+		01C0A12125C09E9D0063058F /* finWorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finWorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		142688308AAFC14122DFCABA /* Pods-WaveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveTests.release.xcconfig"; path = "Target Support Files/Pods-WaveTests/Pods-WaveTests.release.xcconfig"; sourceTree = "<group>"; };
+		1911101779D07D25272BEE0A /* Pods-Wave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave.release.xcconfig"; path = "Target Support Files/Pods-Wave/Pods-Wave.release.xcconfig"; sourceTree = "<group>"; };
+		2ED33233A26320E8253CB9B7 /* Pods-Wave-WaveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave-WaveUITests.debug.xcconfig"; path = "Target Support Files/Pods-Wave-WaveUITests/Pods-Wave-WaveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		324FFCA0FC6426FF025D6A45 /* Pods_Wave_WaveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wave_WaveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		340BABC3C384FA4DC23692E0 /* Pods-Wave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave.debug.xcconfig"; path = "Target Support Files/Pods-Wave/Pods-Wave.debug.xcconfig"; sourceTree = "<group>"; };
+		407B9D48ED2561A110987B0C /* Pods-Wave-WaveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave-WaveUITests.release.xcconfig"; path = "Target Support Files/Pods-Wave-WaveUITests/Pods-Wave-WaveUITests.release.xcconfig"; sourceTree = "<group>"; };
+		92524DD3392DAD9768AF227A /* Pods_WaveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		962170FE766BF0F04E8E89EF /* Pods-WaveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveTests.debug.xcconfig"; path = "Target Support Files/Pods-WaveTests/Pods-WaveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B996BED5FAF00EFFE7316E2C /* Pods_Wave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F5ED6C576E24AF469FE447 /* Pods_Wave.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D411A987D7E38ED3695E6C14 /* Pods_WaveTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +128,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FA64C6AD0BEE7DA3EAEF362 /* Pods_Wave_WaveUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		015F161025C08C930033C521 /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				0173AA3125C10EE0002BBC57 /* Total Workouts */,
+				015F162125C09B600033C521 /* Finished Workout */,
+				0173AA5025C281CA002BBC57 /* Progress Cell */,
+				015F162025C09B490033C521 /* Upcoming Workout */,
+			);
+			path = "Table View";
+			sourceTree = "<group>";
+		};
+		015F162025C09B490033C521 /* Upcoming Workout */ = {
+			isa = PBXGroup;
+			children = (
+				015F161125C08CA60033C521 /* prevWorkoutTableViewCell.swift */,
+				015F161625C0960E0033C521 /* prevWorkout.swift */,
+				015F161B25C096160033C521 /* prevWorkout.xib */,
+			);
+			path = "Upcoming Workout";
+			sourceTree = "<group>";
+		};
+		015F162125C09B600033C521 /* Finished Workout */ = {
+			isa = PBXGroup;
+			children = (
+				01C0A12125C09E9D0063058F /* finWorkoutTableViewCell.swift */,
+				0173AA2C25C0C068002BBC57 /* barCollectionViewCell.swift */,
+				0173AA4625C23951002BBC57 /* finWorkoutNib.xib */,
+				0173AA4B25C23A22002BBC57 /* finWorkoutNib.swift */,
+			);
+			path = "Finished Workout";
+			sourceTree = "<group>";
+		};
 		016DFB1525BFCD4C00EB8E9F = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +174,8 @@
 				016DFB3A25BFCD4F00EB8E9F /* WaveTests */,
 				016DFB4525BFCD4F00EB8E9F /* WaveUITests */,
 				016DFB1F25BFCD4C00EB8E9F /* Products */,
+				F19EEF725635FAB16C63C43F /* Pods */,
+				80B45A9FE96871021845C0C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,9 +192,11 @@
 		016DFB2025BFCD4C00EB8E9F /* Wave */ = {
 			isa = PBXGroup;
 			children = (
+				016DFB7925BFD25700EB8E9F /* Model */,
+				016DFB5725BFCFF100EB8E9F /* Fonts */,
 				016DFB2125BFCD4C00EB8E9F /* AppDelegate.swift */,
 				016DFB2325BFCD4C00EB8E9F /* SceneDelegate.swift */,
-				016DFB2525BFCD4C00EB8E9F /* ViewController.swift */,
+				0197755025BFD59B009AAC14 /* Dashboard View */,
 				016DFB2725BFCD4C00EB8E9F /* Main.storyboard */,
 				016DFB2D25BFCD4F00EB8E9F /* Assets.xcassets */,
 				016DFB2F25BFCD4F00EB8E9F /* LaunchScreen.storyboard */,
@@ -131,6 +224,80 @@
 			path = WaveUITests;
 			sourceTree = "<group>";
 		};
+		016DFB5725BFCFF100EB8E9F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				016DFB5825BFCFFB00EB8E9F /* Como-Bold.ttf */,
+				016DFB5D25BFD00600EB8E9F /* Como-Light.ttf */,
+				016DFB6225BFD01000EB8E9F /* Como-Medium.ttf */,
+				016DFB6725BFD01800EB8E9F /* Como-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		016DFB7925BFD25700EB8E9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				016DFB6C25BFD23D00EB8E9F /* Colors.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0173AA3125C10EE0002BBC57 /* Total Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				0173AA3225C10EEF002BBC57 /* totalWorkouts.xib */,
+				0173AA3725C10EFF002BBC57 /* totalWorkouts.swift */,
+				0173AA3C25C10F1A002BBC57 /* totalWorkoutCollectionViewCell.swift */,
+				0173AA4125C10F2B002BBC57 /* totalWorkoutCollectionViewCell.xib */,
+			);
+			path = "Total Workouts";
+			sourceTree = "<group>";
+		};
+		0173AA5025C281CA002BBC57 /* Progress Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0173AA5125C281DD002BBC57 /* progressCell.swift */,
+				0173AA5925C281E9002BBC57 /* progressCell.xib */,
+			);
+			path = "Progress Cell";
+			sourceTree = "<group>";
+		};
+		0197755025BFD59B009AAC14 /* Dashboard View */ = {
+			isa = PBXGroup;
+			children = (
+				010EBD0325C28FAE00A898FA /* DashboardViewModel.swift */,
+				016DFB2525BFCD4C00EB8E9F /* ViewController.swift */,
+				0197755125BFD603009AAC14 /* thisWeek.xib */,
+				0197755925BFD612009AAC14 /* thisWeek.swift */,
+				015F161025C08C930033C521 /* Table View */,
+			);
+			path = "Dashboard View";
+			sourceTree = "<group>";
+		};
+		80B45A9FE96871021845C0C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B996BED5FAF00EFFE7316E2C /* Pods_Wave.framework */,
+				324FFCA0FC6426FF025D6A45 /* Pods_Wave_WaveUITests.framework */,
+				92524DD3392DAD9768AF227A /* Pods_WaveTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F19EEF725635FAB16C63C43F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				340BABC3C384FA4DC23692E0 /* Pods-Wave.debug.xcconfig */,
+				1911101779D07D25272BEE0A /* Pods-Wave.release.xcconfig */,
+				2ED33233A26320E8253CB9B7 /* Pods-Wave-WaveUITests.debug.xcconfig */,
+				407B9D48ED2561A110987B0C /* Pods-Wave-WaveUITests.release.xcconfig */,
+				962170FE766BF0F04E8E89EF /* Pods-WaveTests.debug.xcconfig */,
+				142688308AAFC14122DFCABA /* Pods-WaveTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +305,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 016DFB4B25BFCD4F00EB8E9F /* Build configuration list for PBXNativeTarget "Wave" */;
 			buildPhases = (
+				3325386BFBA4A727884E9A2A /* [CP] Check Pods Manifest.lock */,
 				016DFB1A25BFCD4C00EB8E9F /* Sources */,
 				016DFB1B25BFCD4C00EB8E9F /* Frameworks */,
 				016DFB1C25BFCD4C00EB8E9F /* Resources */,
+				F9838AE589FA251413723029 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +324,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 016DFB4E25BFCD4F00EB8E9F /* Build configuration list for PBXNativeTarget "WaveTests" */;
 			buildPhases = (
+				68101A67584A62C2D260A81B /* [CP] Check Pods Manifest.lock */,
 				016DFB3325BFCD4F00EB8E9F /* Sources */,
 				016DFB3425BFCD4F00EB8E9F /* Frameworks */,
 				016DFB3525BFCD4F00EB8E9F /* Resources */,
@@ -173,9 +343,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 016DFB5125BFCD4F00EB8E9F /* Build configuration list for PBXNativeTarget "WaveUITests" */;
 			buildPhases = (
+				ACE6BF4CFC68C21141A2DF85 /* [CP] Check Pods Manifest.lock */,
 				016DFB3E25BFCD4F00EB8E9F /* Sources */,
 				016DFB3F25BFCD4F00EB8E9F /* Frameworks */,
 				016DFB4025BFCD4F00EB8E9F /* Resources */,
+				D3BECA9F2D96D891E52486D1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,7 +406,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0173AA4225C10F2B002BBC57 /* totalWorkoutCollectionViewCell.xib in Resources */,
+				0173AA3325C10EEF002BBC57 /* totalWorkouts.xib in Resources */,
 				016DFB3125BFCD4F00EB8E9F /* LaunchScreen.storyboard in Resources */,
+				0197755225BFD603009AAC14 /* thisWeek.xib in Resources */,
+				016DFB5925BFCFFB00EB8E9F /* Como-Bold.ttf in Resources */,
+				016DFB6825BFD01800EB8E9F /* Como-SemiBold.ttf in Resources */,
+				016DFB5E25BFD00600EB8E9F /* Como-Light.ttf in Resources */,
+				0173AA5A25C281E9002BBC57 /* progressCell.xib in Resources */,
+				0173AA4725C23951002BBC57 /* finWorkoutNib.xib in Resources */,
+				016DFB6325BFD01000EB8E9F /* Como-Medium.ttf in Resources */,
+				015F161C25C096160033C521 /* prevWorkout.xib in Resources */,
 				016DFB2E25BFCD4F00EB8E9F /* Assets.xcassets in Resources */,
 				016DFB2925BFCD4C00EB8E9F /* Main.storyboard in Resources */,
 			);
@@ -256,15 +438,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3325386BFBA4A727884E9A2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wave-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68101A67584A62C2D260A81B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WaveTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACE6BF4CFC68C21141A2DF85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wave-WaveUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3BECA9F2D96D891E52486D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wave-WaveUITests/Pods-Wave-WaveUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wave-WaveUITests/Pods-Wave-WaveUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wave-WaveUITests/Pods-Wave-WaveUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9838AE589FA251413723029 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wave/Pods-Wave-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wave/Pods-Wave-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wave/Pods-Wave-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		016DFB1A25BFCD4C00EB8E9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0173AA2D25C0C068002BBC57 /* barCollectionViewCell.swift in Sources */,
+				0173AA3D25C10F1A002BBC57 /* totalWorkoutCollectionViewCell.swift in Sources */,
 				016DFB2C25BFCD4C00EB8E9F /* Wave.xcdatamodeld in Sources */,
+				01C0A12225C09E9D0063058F /* finWorkoutTableViewCell.swift in Sources */,
+				015F161225C08CA60033C521 /* prevWorkoutTableViewCell.swift in Sources */,
+				0197755A25BFD612009AAC14 /* thisWeek.swift in Sources */,
+				010EBD0425C28FAE00A898FA /* DashboardViewModel.swift in Sources */,
+				0173AA5225C281DD002BBC57 /* progressCell.swift in Sources */,
+				016DFB6D25BFD23D00EB8E9F /* Colors.swift in Sources */,
+				015F161725C0960E0033C521 /* prevWorkout.swift in Sources */,
+				0173AA4C25C23A22002BBC57 /* finWorkoutNib.swift in Sources */,
 				016DFB2625BFCD4C00EB8E9F /* ViewController.swift in Sources */,
 				016DFB2225BFCD4C00EB8E9F /* AppDelegate.swift in Sources */,
 				016DFB2425BFCD4C00EB8E9F /* SceneDelegate.swift in Sources */,
+				0173AA3825C10EFF002BBC57 /* totalWorkouts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +733,7 @@
 		};
 		016DFB4C25BFCD4F00EB8E9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 340BABC3C384FA4DC23692E0 /* Pods-Wave.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -456,6 +753,7 @@
 		};
 		016DFB4D25BFCD4F00EB8E9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1911101779D07D25272BEE0A /* Pods-Wave.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +773,7 @@
 		};
 		016DFB4F25BFCD4F00EB8E9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 962170FE766BF0F04E8E89EF /* Pods-WaveTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +796,7 @@
 		};
 		016DFB5025BFCD4F00EB8E9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 142688308AAFC14122DFCABA /* Pods-WaveTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +819,7 @@
 		};
 		016DFB5225BFCD4F00EB8E9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ED33233A26320E8253CB9B7 /* Pods-Wave-WaveUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +840,7 @@
 		};
 		016DFB5325BFCD4F00EB8E9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 407B9D48ED2561A110987B0C /* Pods-Wave-WaveUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Como-Medium.ttf">
+            <string>Como-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="totalWorkoutCollectionViewCell" customModule="Wave" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="20" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCd-KP-RGr">
+                    <rect key="frame" x="0.0" y="72" width="20" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="nXz-Pj-a7A"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Como-Medium" family="Como" pointSize="8"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fpk-Mv-Gu2">
+                    <rect key="frame" x="5" y="52" width="10" height="20"/>
+                    <color key="backgroundColor" red="0.0" green="0.72549019609999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="4rE-OX-i5S"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="DCd-KP-RGr" secondAttribute="trailing" id="9rH-ba-jtv"/>
+                <constraint firstAttribute="trailing" secondItem="Fpk-Mv-Gu2" secondAttribute="trailing" constant="5" id="RlE-Fh-tfI"/>
+                <constraint firstItem="DCd-KP-RGr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Z0P-sd-50h"/>
+                <constraint firstItem="Fpk-Mv-Gu2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="fUI-DM-T8l"/>
+                <constraint firstAttribute="bottom" secondItem="DCd-KP-RGr" secondAttribute="bottom" id="hWk-om-XYj"/>
+                <constraint firstItem="DCd-KP-RGr" firstAttribute="top" secondItem="Fpk-Mv-Gu2" secondAttribute="bottom" id="rRl-qS-mwK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="barLabel" destination="DCd-KP-RGr" id="hrA-K2-ZYn"/>
+                <outlet property="barView" destination="Fpk-Mv-Gu2" id="lqj-VP-YVr"/>
+                <outlet property="barViewHeight" destination="4rE-OX-i5S" id="1lO-xV-YQZ"/>
+            </connections>
+            <point key="canvasLocation" x="138" y="116"/>
+        </view>
+    </objects>
+</document>

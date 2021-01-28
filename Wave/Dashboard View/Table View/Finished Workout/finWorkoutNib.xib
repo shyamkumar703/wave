@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Como-Bold.ttf">
+            <string>Como-Bold</string>
+        </array>
+        <array key="Como-Medium.ttf">
+            <string>Como-Medium</string>
+        </array>
+        <array key="Como-SemiBold.ttf">
+            <string>Como-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="finWorkoutNib" customModule="Wave" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uv-rf-lUi">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YESTERDAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vS-Ac-ksi">
+                            <rect key="frame" x="8" y="8" width="398" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="lsK-oG-hXh"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="12"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ia5-JI-3QF">
+                            <rect key="frame" x="4" y="28" width="406" height="36"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Push-Pull-Legs C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBQ-xS-V8j">
+                                    <rect key="frame" x="0.0" y="0.0" width="406" height="22.5"/>
+                                    <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="20"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hr 10 mins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UA1-cS-TeE">
+                                    <rect key="frame" x="0.0" y="22.5" width="406" height="13.5"/>
+                                    <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="12"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="XvN-tT-NJ5"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ctg-Rj-aUt">
+                            <rect key="frame" x="25" y="72" width="364" height="20"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVt-Go-HOG">
+                                    <rect key="frame" x="0.0" y="0.0" width="118" height="20"/>
+                                    <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="10"/>
+                                    <color key="textColor" red="0.3921568627" green="0.1843137255" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHOULDERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eI1-7z-D3s">
+                                    <rect key="frame" x="123" y="0.0" width="118" height="20"/>
+                                    <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="10"/>
+                                    <color key="textColor" red="0.3921568627" green="0.1843137255" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRICEPS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iq-Sr-dgo">
+                                    <rect key="frame" x="246" y="0.0" width="118" height="20"/>
+                                    <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="10"/>
+                                    <color key="textColor" red="0.3921568627" green="0.1843137255" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Xx7-DO-nrM"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="7Ho-r4-5Kz">
+                            <rect key="frame" x="25" y="104" width="364" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="85%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ect-Hl-Yx9">
+                                    <rect key="frame" x="0.0" y="0.0" width="364" height="28"/>
+                                    <fontDescription key="fontDescription" name="Como-Bold" family="Como" pointSize="30"/>
+                                    <color key="textColor" red="0.0" green="0.72549019609999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="of goal reps completed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mG-A9-MVF">
+                                    <rect key="frame" x="0.0" y="28" width="364" height="12"/>
+                                    <fontDescription key="fontDescription" name="Como-Medium" family="Como" pointSize="13"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="8OW-Ne-JfT"/>
+                            </constraints>
+                        </stackView>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oTr-pI-mNN">
+                            <rect key="frame" x="167" y="159" width="80" height="81"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="4WE-DE-Y7A"/>
+                                <constraint firstAttribute="height" constant="81" id="wHm-Tg-cOx"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="mvm-Oe-T8S">
+                                <size key="itemSize" width="20" height="81"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <cells/>
+                        </collectionView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtm-et-9wZ">
+                            <rect key="frame" x="143" y="152" width="128" height="6"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="128" id="777-vz-OZb"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL REPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3h-Ia-UpR">
+                            <rect key="frame" x="274" y="154" width="107" height="9"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="9" id="Odx-EU-xhL"/>
+                                <constraint firstAttribute="width" constant="107" id="wBG-wF-5ci"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Como-Medium" family="Como" pointSize="10"/>
+                            <color key="textColor" red="0.3921568627" green="0.1843137255" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="5vS-Ac-ksi" firstAttribute="top" secondItem="8uv-rf-lUi" secondAttribute="top" constant="8" id="4f1-jv-BXT"/>
+                        <constraint firstItem="oTr-pI-mNN" firstAttribute="top" secondItem="7Ho-r4-5Kz" secondAttribute="bottom" constant="15" id="7n7-4f-YD9"/>
+                        <constraint firstItem="oTr-pI-mNN" firstAttribute="top" secondItem="xtm-et-9wZ" secondAttribute="bottom" constant="1" id="8bg-MN-h2w"/>
+                        <constraint firstAttribute="trailing" secondItem="5vS-Ac-ksi" secondAttribute="trailing" constant="8" id="9UX-sX-JtQ"/>
+                        <constraint firstItem="ia5-JI-3QF" firstAttribute="leading" secondItem="8uv-rf-lUi" secondAttribute="leading" constant="4" id="Bvk-L2-iiN"/>
+                        <constraint firstItem="A3h-Ia-UpR" firstAttribute="leading" secondItem="xtm-et-9wZ" secondAttribute="trailing" constant="3" id="D7s-af-6oF"/>
+                        <constraint firstItem="7Ho-r4-5Kz" firstAttribute="top" secondItem="ctg-Rj-aUt" secondAttribute="bottom" constant="12" id="EtZ-xf-Oxl"/>
+                        <constraint firstItem="ctg-Rj-aUt" firstAttribute="top" secondItem="ia5-JI-3QF" secondAttribute="bottom" constant="8" id="G35-2L-9g1"/>
+                        <constraint firstItem="5vS-Ac-ksi" firstAttribute="leading" secondItem="8uv-rf-lUi" secondAttribute="leading" constant="8" id="Ggo-E2-wVS"/>
+                        <constraint firstAttribute="trailing" secondItem="ia5-JI-3QF" secondAttribute="trailing" constant="4" id="Huw-WC-9Pf"/>
+                        <constraint firstItem="xtm-et-9wZ" firstAttribute="top" secondItem="7Ho-r4-5Kz" secondAttribute="bottom" constant="8" id="Hzj-lG-cok"/>
+                        <constraint firstItem="ia5-JI-3QF" firstAttribute="top" secondItem="5vS-Ac-ksi" secondAttribute="bottom" constant="8" id="JRt-VY-2tH"/>
+                        <constraint firstAttribute="trailing" secondItem="ctg-Rj-aUt" secondAttribute="trailing" constant="25" id="MIa-ry-N0j"/>
+                        <constraint firstItem="oTr-pI-mNN" firstAttribute="centerX" secondItem="8uv-rf-lUi" secondAttribute="centerX" id="Nug-k1-uEN"/>
+                        <constraint firstItem="ctg-Rj-aUt" firstAttribute="leading" secondItem="8uv-rf-lUi" secondAttribute="leading" constant="25" id="Ol1-5K-pA6"/>
+                        <constraint firstItem="7Ho-r4-5Kz" firstAttribute="leading" secondItem="8uv-rf-lUi" secondAttribute="leading" constant="25" id="VAf-K4-nGp"/>
+                        <constraint firstItem="7Ho-r4-5Kz" firstAttribute="centerX" secondItem="8uv-rf-lUi" secondAttribute="centerX" id="iVZ-Wo-nPc"/>
+                        <constraint firstItem="A3h-Ia-UpR" firstAttribute="top" secondItem="7Ho-r4-5Kz" secondAttribute="bottom" constant="10" id="nvc-Vy-Q7A"/>
+                        <constraint firstItem="xtm-et-9wZ" firstAttribute="centerX" secondItem="8uv-rf-lUi" secondAttribute="centerX" id="qE3-x8-6iS"/>
+                        <constraint firstAttribute="trailing" secondItem="7Ho-r4-5Kz" secondAttribute="trailing" constant="25" id="vdN-fE-aNV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="8uv-rf-lUi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="B7o-DW-5dF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8uv-rf-lUi" secondAttribute="bottom" id="mgl-ft-ykY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8uv-rf-lUi" secondAttribute="trailing" id="tzg-sJ-bEF"/>
+                <constraint firstItem="8uv-rf-lUi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vJa-mI-XVa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="oTr-pI-mNN" id="v5C-KK-a9j"/>
+                <outlet property="dashView" destination="xtm-et-9wZ" id="MCm-lb-om5"/>
+                <outlet property="workoutGroup1" destination="wVt-Go-HOG" id="lNW-Ov-NJu"/>
+                <outlet property="workoutGroup2" destination="eI1-7z-D3s" id="UoY-H0-kea"/>
+                <outlet property="workoutGroup3" destination="8iq-Sr-dgo" id="Xom-2i-DjB"/>
+            </connections>
+            <point key="canvasLocation" x="138" y="140"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

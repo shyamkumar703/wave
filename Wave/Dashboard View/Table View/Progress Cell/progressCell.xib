@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Como-SemiBold.ttf">
+            <string>Como-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="progressCell" customModule="Wave" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TkL-Tl-m9f">
+                    <rect key="frame" x="11" y="8" width="342" height="134"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BENCH PRESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mp5-i5-b3D">
+                            <rect key="frame" x="8" y="8" width="326" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="qXY-gj-gIN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="12"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ub3-Gb-te6">
+                            <rect key="frame" x="8" y="28" width="326" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="225 lb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIG-lg-y8v">
+                                    <rect key="frame" x="0.0" y="0.0" width="326" height="30"/>
+                                    <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="35"/>
+                                    <color key="textColor" red="0.0" green="0.72549019609999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1O-TX-Ilm">
+                                    <rect key="frame" x="0.0" y="30" width="326" height="10"/>
+                                    <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="12"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="UjJ-5X-MRv"/>
+                            </constraints>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSa-u8-Adh" customClass="LineChartView" customModule="Charts">
+                            <rect key="frame" x="8" y="72" width="326" height="58"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="QSa-u8-Adh" firstAttribute="leading" secondItem="TkL-Tl-m9f" secondAttribute="leading" constant="8" id="0At-vq-YCn"/>
+                        <constraint firstItem="ub3-Gb-te6" firstAttribute="leading" secondItem="TkL-Tl-m9f" secondAttribute="leading" constant="8" id="AgN-RA-xVe"/>
+                        <constraint firstAttribute="trailing" secondItem="ub3-Gb-te6" secondAttribute="trailing" constant="8" id="Ap9-hW-ge8"/>
+                        <constraint firstItem="mp5-i5-b3D" firstAttribute="leading" secondItem="TkL-Tl-m9f" secondAttribute="leading" constant="8" id="Lm6-iO-196"/>
+                        <constraint firstItem="mp5-i5-b3D" firstAttribute="top" secondItem="TkL-Tl-m9f" secondAttribute="top" constant="8" id="TsB-I8-0TO"/>
+                        <constraint firstAttribute="trailing" secondItem="QSa-u8-Adh" secondAttribute="trailing" constant="8" id="cRP-am-Sto"/>
+                        <constraint firstAttribute="trailing" secondItem="mp5-i5-b3D" secondAttribute="trailing" constant="8" id="lmY-eu-mY8"/>
+                        <constraint firstAttribute="bottom" secondItem="QSa-u8-Adh" secondAttribute="bottom" constant="4" id="wkW-9X-Dl1"/>
+                        <constraint firstItem="QSa-u8-Adh" firstAttribute="top" secondItem="ub3-Gb-te6" secondAttribute="bottom" constant="4" id="xiL-zh-128"/>
+                        <constraint firstItem="ub3-Gb-te6" firstAttribute="top" secondItem="mp5-i5-b3D" secondAttribute="bottom" constant="8" id="xtu-9t-sL6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="TkL-Tl-m9f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Oc0-Re-apX"/>
+                <constraint firstItem="TkL-Tl-m9f" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="11" id="Y6z-JK-Dma"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="TkL-Tl-m9f" secondAttribute="bottom" constant="8" id="sgS-wb-TeX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TkL-Tl-m9f" secondAttribute="trailing" constant="11" id="yvp-Xn-LHl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backView" destination="TkL-Tl-m9f" id="Wog-yE-sXC"/>
+                <outlet property="lineChartView" destination="QSa-u8-Adh" id="baO-gZ-Vl3"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="139.95535714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -62,5 +62,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Como-Bold.ttf</string>
+		<string>Como-Light.ttf</string>
+		<string>Como-Medium.ttf</string>
+		<string>Como-SemiBold.ttf</string>
+	</array>
 </dict>
 </plist>

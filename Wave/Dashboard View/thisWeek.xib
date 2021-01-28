@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Como-Medium.ttf">
+            <string>Como-Medium</string>
+        </array>
+        <array key="Como-SemiBold.ttf">
+            <string>Como-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="thisWeek" customModule="Wave" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="157"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rCj-8E-pOT">
+                    <rect key="frame" x="10" y="10" width="344" height="137"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="fRS-Jh-kce">
+                            <rect key="frame" x="0.0" y="0.0" width="344" height="51.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ga-J2-hg1">
+                                    <rect key="frame" x="0.0" y="0.0" width="344" height="36"/>
+                                    <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="35"/>
+                                    <color key="textColor" red="0.0" green="0.72549019607843135" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="workouts this week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgX-lH-NBW">
+                                    <rect key="frame" x="0.0" y="36" width="344" height="15.5"/>
+                                    <fontDescription key="fontDescription" name="Como-Medium" family="Como" pointSize="15"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="I2a-q5-qrr">
+                            <rect key="frame" x="0.0" y="61.5" width="344" height="51.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1500 lb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbo-Ii-yx6">
+                                    <rect key="frame" x="0.0" y="0.0" width="344" height="36"/>
+                                    <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="35"/>
+                                    <color key="textColor" red="0.0039215686274509803" green="0.38823529411764707" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lifted" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAl-Qe-MXg">
+                                    <rect key="frame" x="0.0" y="36" width="344" height="15.5"/>
+                                    <fontDescription key="fontDescription" name="Como-Medium" family="Como" pointSize="15"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 sets of chest · 10 sets of back · 5 sets of biceps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P73-ni-OI1">
+                            <rect key="frame" x="0.0" y="123" width="344" height="14"/>
+                            <fontDescription key="fontDescription" name="Como-Medium" family="Como" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rCj-8E-pOT" secondAttribute="trailing" constant="10" id="31s-rd-AsP"/>
+                <constraint firstItem="rCj-8E-pOT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="5nh-Z8-Np5"/>
+                <constraint firstItem="rCj-8E-pOT" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-10" id="hMj-kP-6Xo"/>
+                <constraint firstItem="rCj-8E-pOT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="zWE-1a-Gwg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="setsLabel" destination="P73-ni-OI1" id="c7L-fi-nuY"/>
+                <outlet property="weightLifted" destination="Fbo-Ii-yx6" id="RKr-Lt-6Aj"/>
+                <outlet property="workoutsThisWeek" destination="2Ga-J2-hg1" id="52m-ev-y3T"/>
+            </connections>
+            <point key="canvasLocation" x="138" y="119"/>
+        </view>
+    </objects>
+</document>
