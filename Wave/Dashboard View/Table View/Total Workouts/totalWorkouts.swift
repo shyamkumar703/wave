@@ -9,6 +9,7 @@ import UIKit
 
 class totalWorkouts: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
+    var animate = false
     
     override func awakeFromNib() {
         collectionView.delegate = self

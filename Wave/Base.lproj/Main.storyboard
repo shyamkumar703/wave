@@ -44,6 +44,14 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DY-4X-idI">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                                 <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzy-rA-6xM">
+                                                        <rect key="frame" x="144.5" y="92" width="125" height="30.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="125" id="G5Y-12-rOa"/>
+                                                            <constraint firstAttribute="height" constant="30.5" id="Qq6-WH-1pg"/>
+                                                        </constraints>
+                                                    </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zyg-ay-hqz">
                                                         <rect key="frame" x="10" y="30" width="394" height="93"/>
                                                         <subviews>
@@ -87,11 +95,13 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.0039215686274509803" green="0.38823529411764707" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="zzy-rA-6xM" firstAttribute="centerX" secondItem="1DY-4X-idI" secondAttribute="centerX" id="Bwq-Qf-S0e"/>
                                                     <constraint firstAttribute="height" constant="200" id="ONc-8S-r1e"/>
                                                     <constraint firstItem="zyg-ay-hqz" firstAttribute="top" secondItem="1DY-4X-idI" secondAttribute="top" constant="30" id="ZKe-Lw-fSa"/>
                                                     <constraint firstAttribute="trailing" secondItem="zyg-ay-hqz" secondAttribute="trailing" constant="10" id="lTN-HJ-hYf"/>
                                                     <constraint firstItem="zyg-ay-hqz" firstAttribute="leading" secondItem="1DY-4X-idI" secondAttribute="leading" constant="10" id="qkL-ev-ICf"/>
                                                     <constraint firstItem="zyg-ay-hqz" firstAttribute="centerX" secondItem="1DY-4X-idI" secondAttribute="centerX" id="vcd-ZX-C5J"/>
+                                                    <constraint firstAttribute="bottom" secondItem="zzy-rA-6xM" secondAttribute="bottom" constant="77.5" id="yTn-Pg-PUR"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Fe-Ht-IUX">
@@ -379,6 +389,9 @@
                         <outlet property="progressButton" destination="nOx-Jh-hhE" id="ptM-mf-lFh"/>
                         <outlet property="scoreboardView" destination="7Fe-Ht-IUX" id="78M-s1-OD1"/>
                         <outlet property="scoreboardViewHeight" destination="3yg-bg-hMv" id="fa1-ke-938"/>
+                        <outlet property="selectedView" destination="zzy-rA-6xM" id="Y7k-wC-bM9"/>
+                        <outlet property="selectedViewHeight" destination="Qq6-WH-1pg" id="L5j-6G-ERp"/>
+                        <outlet property="selectedViewWidth" destination="G5Y-12-rOa" id="WYe-El-vPU"/>
                         <outlet property="tableView" destination="s0D-yG-g4b" id="AKe-73-ReZ"/>
                         <outlet property="tableViewHeight" destination="ELO-6V-xAH" id="qo3-yu-6fh"/>
                         <outlet property="workoutButton" destination="pxv-8C-WAN" id="2Lx-kU-eC8"/>

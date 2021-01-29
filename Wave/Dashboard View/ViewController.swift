@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var scoreboardViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var selectedView: UIView!
+    @IBOutlet weak var selectedViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var selectedViewHeight: NSLayoutConstraint!
     
     var expandedIndices: [IndexPath] = []
     
@@ -41,8 +44,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         dashboardButton.setTitleColor(Colors.waveBlue, for: .normal)
-        dashboardButton.backgroundColor = .white
-        dashboardButton.layer.cornerRadius = 15
+//        dashboardButton.backgroundColor = .white
+//        dashboardButton.layer.cornerRadius = 15
+        
+        selectedView.backgroundColor = .white
+        selectedView.layer.cornerRadius = 15
+        selectedViewWidth.constant = dashboardButton.frame.width - 15
+        selectedViewHeight.constant = dashboardButton.frame.height
         
         scoreboardView.layer.cornerRadius = 5
         scoreboardView.layer.shadowColor = UIColor.black.cgColor
@@ -103,36 +111,27 @@ class ViewController: UIViewController {
     func switchViewTransition(_ newButton: SelectedButton) {
         if let previousButton = selectedButton {
             selected = newButton
+            let buttonDiff = selected.rawValue - 1
+            let xTranslation = buttonDiff * (Int(dashboardButton.frame.width) + 10)
             
-            UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseInOut, animations: {
-                previousButton.backgroundColor = .clear
-                previousButton.setTitleColor(.white, for: .normal)
-                self.selectedButton?.backgroundColor = .white
-                self.selectedButton?.setTitleColor(Colors.waveBlue, for: .normal)
-            }, completion: {fin in
-                UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear, animations: {
-                    self.tableView.alpha = 0
-                    self.scoreboardView.alpha = 0
-                }, completion: { fin in
-                    for subview in self.scoreboardView.subviews {
-                        subview.removeFromSuperview()
-                    }
-                    
-                    let newScoreboard = self.getScoreboardView()
-                    self.scoreboardViewHeight.constant = newScoreboard.height
-                    self.view.layoutIfNeeded()
-                    newScoreboard.view.addViewToSuperview(self.scoreboardView)
-                    
-                    self.tableViewSrc = self.dashboardVM.getDashboardCells(self.tableView, self.selected)
-                    self.tableView.reloadData()
-                    
-                    UIView.animate(withDuration: 0.2, delay: 0.25, options: .curveLinear, animations: {
-                        self.scoreboardView.alpha = 1
-                        self.tableView.alpha = 1
-                    }, completion: nil)
-                    
-                })
+            previousButton.setTitleColor(.white, for: .normal)
+            UIView.animate(withDuration: 0.25, animations: {
+                self.selectedView?.transform = CGAffineTransform(translationX: CGFloat(xTranslation), y: 0)
             })
+            selectedButton?.setTitleColor(Colors.waveBlue, for: .normal)
+            
+            for subview in self.scoreboardView.subviews {
+                subview.removeFromSuperview()
+            }
+            
+            let newScoreboard = self.getScoreboardView()
+            scoreboardViewHeight.constant = newScoreboard.height
+            view.layoutIfNeeded()
+            newScoreboard.view.addViewToSuperview(self.scoreboardView)
+            
+            
+            tableViewSrc = self.dashboardVM.getDashboardCells(self.tableView, self.selected)
+            tableView.reloadData()
         }
     }
 
