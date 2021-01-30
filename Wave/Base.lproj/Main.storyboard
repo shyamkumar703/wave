@@ -39,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Wo-iQ-imc">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="810"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DY-4X-idI">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
@@ -356,7 +356,7 @@
                                             <constraint firstAttribute="trailing" secondItem="s0D-yG-g4b" secondAttribute="trailing" id="JTE-Zn-4xf"/>
                                             <constraint firstAttribute="trailing" secondItem="1DY-4X-idI" secondAttribute="trailing" id="T2Z-C1-3Mf"/>
                                             <constraint firstItem="s0D-yG-g4b" firstAttribute="leading" secondItem="9Wo-iQ-imc" secondAttribute="leading" id="UwN-FB-W96"/>
-                                            <constraint firstAttribute="bottom" secondItem="s0D-yG-g4b" secondAttribute="bottom" constant="8" id="pqI-su-x5o"/>
+                                            <constraint firstAttribute="bottom" secondItem="s0D-yG-g4b" secondAttribute="bottom" id="pqI-su-x5o"/>
                                             <constraint firstItem="7Fe-Ht-IUX" firstAttribute="leading" secondItem="9Wo-iQ-imc" secondAttribute="leading" constant="8" id="vwb-RP-iMH"/>
                                             <constraint firstItem="1DY-4X-idI" firstAttribute="top" secondItem="9Wo-iQ-imc" secondAttribute="top" id="zSj-3b-cn7"/>
                                         </constraints>
@@ -395,14 +395,152 @@
                         <outlet property="tableView" destination="s0D-yG-g4b" id="AKe-73-ReZ"/>
                         <outlet property="tableViewHeight" destination="ELO-6V-xAH" id="qo3-yu-6fh"/>
                         <outlet property="workoutButton" destination="pxv-8C-WAN" id="2Lx-kU-eC8"/>
+                        <segue destination="Laj-Pi-Bhi" kind="presentation" identifier="addWorkout" modalPresentationStyle="fullScreen" id="Ez3-ZF-Adb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </scene>
+        <!--Design Workout View Controller-->
+        <scene sceneID="TSO-c1-03b">
+            <objects>
+                <viewController id="Laj-Pi-Bhi" customClass="designWorkoutViewController" customModule="Wave" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ijK-mU-RbG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHJ-S7-rTT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGG-4O-60c">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Workout name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zQ5-au-wr2">
+                                                <rect key="frame" x="8" y="8" width="366" height="54"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="54" id="EmK-kU-FiJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="5po-qY-xnX">
+                                                <rect key="frame" x="0.0" y="70" width="414" height="678"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="678" id="MBw-8D-QTW"/>
+                                                </constraints>
+                                            </tableView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgf-i9-uvd">
+                                                <rect key="frame" x="381" y="8" width="18" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="YDH-N6-6Pc"/>
+                                                    <constraint firstAttribute="width" constant="18" id="tE1-Lj-cjl"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.0039215686269999999" green="0.38823529410000002" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <state key="normal" image="xmark" catalog="system"/>
+                                                <connections>
+                                                    <action selector="closeTapped:" destination="Laj-Pi-Bhi" eventType="touchUpInside" id="HCT-Q9-d3U"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73N-q4-AXw">
+                                                <rect key="frame" x="143.5" y="738" width="127" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="OnT-Rr-r1x"/>
+                                                    <constraint firstAttribute="width" constant="127" id="aSz-ZG-r8o"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="12"/>
+                                                <state key="normal" title="ADD AN EXERCISE">
+                                                    <color key="titleColor" red="0.0039215686269999999" green="0.38823529410000002" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addExercisePressed:" destination="Laj-Pi-Bhi" eventType="touchUpInside" id="fo1-YA-wpl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.95686274509803915" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="73N-q4-AXw" secondAttribute="bottom" constant="50" id="0NB-NL-5XL"/>
+                                            <constraint firstItem="73N-q4-AXw" firstAttribute="top" secondItem="5po-qY-xnX" secondAttribute="bottom" constant="-10" id="2k5-44-hKz"/>
+                                            <constraint firstAttribute="trailing" secondItem="5po-qY-xnX" secondAttribute="trailing" id="AfE-e2-pTS"/>
+                                            <constraint firstItem="zQ5-au-wr2" firstAttribute="top" secondItem="KGG-4O-60c" secondAttribute="top" constant="8" id="BaV-ah-Hlr"/>
+                                            <constraint firstItem="zQ5-au-wr2" firstAttribute="leading" secondItem="KGG-4O-60c" secondAttribute="leading" constant="8" id="GdD-Kp-aLZ"/>
+                                            <constraint firstItem="5po-qY-xnX" firstAttribute="leading" secondItem="KGG-4O-60c" secondAttribute="leading" id="M0E-Ff-tfn"/>
+                                            <constraint firstAttribute="bottom" secondItem="5po-qY-xnX" secondAttribute="bottom" constant="70" id="M3V-f2-SkI"/>
+                                            <constraint firstAttribute="trailing" secondItem="fgf-i9-uvd" secondAttribute="trailing" constant="15" id="Oua-bm-JFQ"/>
+                                            <constraint firstItem="73N-q4-AXw" firstAttribute="centerX" secondItem="KGG-4O-60c" secondAttribute="centerX" id="cjZ-6x-ODA"/>
+                                            <constraint firstAttribute="trailing" secondItem="zQ5-au-wr2" secondAttribute="trailing" constant="40" id="h2B-Rp-uco"/>
+                                            <constraint firstItem="fgf-i9-uvd" firstAttribute="top" secondItem="KGG-4O-60c" secondAttribute="top" constant="8" id="ukg-wm-dcu"/>
+                                            <constraint firstItem="5po-qY-xnX" firstAttribute="top" secondItem="zQ5-au-wr2" secondAttribute="bottom" constant="8" id="zDd-rE-RAq"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="KGG-4O-60c" firstAttribute="width" secondItem="ZHJ-S7-rTT" secondAttribute="width" id="0Q8-6T-7v3"/>
+                                    <constraint firstItem="KGG-4O-60c" firstAttribute="leading" secondItem="ZHJ-S7-rTT" secondAttribute="leading" id="21r-zx-ql3"/>
+                                    <constraint firstAttribute="trailing" secondItem="KGG-4O-60c" secondAttribute="trailing" id="Ii2-ZK-O9I"/>
+                                    <constraint firstItem="KGG-4O-60c" firstAttribute="top" secondItem="ZHJ-S7-rTT" secondAttribute="top" id="KAr-Z9-b6P"/>
+                                    <constraint firstItem="KGG-4O-60c" firstAttribute="height" secondItem="ZHJ-S7-rTT" secondAttribute="height" priority="250" id="N58-DM-lk2"/>
+                                    <constraint firstAttribute="bottom" secondItem="KGG-4O-60c" secondAttribute="bottom" id="x3Y-6v-hAG"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Cf0-cx-L68"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZHJ-S7-rTT" firstAttribute="trailing" secondItem="Cf0-cx-L68" secondAttribute="trailing" id="NCI-cN-gty"/>
+                            <constraint firstItem="ZHJ-S7-rTT" firstAttribute="leading" secondItem="Cf0-cx-L68" secondAttribute="leading" id="cvB-AP-YH3"/>
+                            <constraint firstItem="ZHJ-S7-rTT" firstAttribute="bottom" secondItem="Cf0-cx-L68" secondAttribute="bottom" id="knn-cw-5CF"/>
+                            <constraint firstItem="ZHJ-S7-rTT" firstAttribute="top" secondItem="Cf0-cx-L68" secondAttribute="top" id="vVa-tP-h2P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addExerciseButton" destination="73N-q4-AXw" id="gAr-gT-Xvp"/>
+                        <outlet property="tableView" destination="5po-qY-xnX" id="TbN-E4-sUG"/>
+                        <outlet property="tableViewHeight" destination="MBw-8D-QTW" id="7oQ-7A-dAM"/>
+                        <outlet property="workoutName" destination="zQ5-au-wr2" id="TIZ-Nd-7Fq"/>
+                        <segue destination="j2e-cx-aS3" kind="presentation" identifier="addExercise" modalPresentationStyle="fullScreen" id="aal-IE-OVH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fi-Yb-dlb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1198.5507246376812" y="103.79464285714285"/>
+        </scene>
+        <!--Add Workout View Controller-->
+        <scene sceneID="608-1B-Ujf">
+            <objects>
+                <viewController id="j2e-cx-aS3" customClass="addWorkoutViewController" customModule="Wave" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lHP-BP-ny0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jbf-ZZ-aRX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="433"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FAu-0D-bWT"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jbf-ZZ-aRX" firstAttribute="top" secondItem="FAu-0D-bWT" secondAttribute="top" id="J77-iU-rsN"/>
+                            <constraint firstItem="FAu-0D-bWT" firstAttribute="bottom" secondItem="Jbf-ZZ-aRX" secondAttribute="bottom" constant="385" id="ZzB-Gg-CrY"/>
+                            <constraint firstItem="Jbf-ZZ-aRX" firstAttribute="leading" secondItem="FAu-0D-bWT" secondAttribute="leading" id="adb-w8-tpS"/>
+                            <constraint firstItem="Jbf-ZZ-aRX" firstAttribute="trailing" secondItem="FAu-0D-bWT" secondAttribute="trailing" id="pbh-Az-7xf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addView" destination="Jbf-ZZ-aRX" id="elP-Py-2WU"/>
+                        <outlet property="viewToBottom" destination="ZzB-Gg-CrY" id="Qrz-Vp-Qdz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JT4-iK-IcF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2242.0289855072465" y="103.79464285714285"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

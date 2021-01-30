@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Como-SemiBold.ttf">
+            <string>Como-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="addExercise" customModule="Wave" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="433"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gXJ-uk-OCk">
+                    <rect key="frame" x="0.0" y="10" width="414" height="331"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bench Press" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uKg-fX-PQF">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="57.5"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="30"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cB0-h7-tqU">
+                            <rect key="frame" x="0.0" y="67.5" width="414" height="73"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tm7-H7-8VN">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
+                                    <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="40"/>
+                                    <color key="textColor" red="0.0039215686269999999" green="0.38823529410000002" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="qLu-Nt-yue">
+                            <rect key="frame" x="0.0" y="150.5" width="414" height="73"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wp-jr-LuV">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
+                                    <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="40"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="pac-IN-J3t">
+                            <rect key="frame" x="0.0" y="233.5" width="414" height="97.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="135" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRX-td-915">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="97.5"/>
+                                    <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="40"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IOV-F6-hIM">
+                    <rect key="frame" x="0.0" y="351" width="414" height="60"/>
+                    <color key="backgroundColor" red="0.89411764705882346" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="YDE-jA-f9d"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hVO-lB-Sip">
+                        <size key="itemSize" width="3" height="60"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8do-EB-T7F">
+                    <rect key="frame" x="0.0" y="414" width="414" height="19"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nk4-7T-VIF">
+                            <rect key="frame" x="0.0" y="0.0" width="131.5" height="19"/>
+                            <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="12"/>
+                            <state key="normal" title="SETS &amp; REPS">
+                                <color key="titleColor" red="0.0039215686269999999" green="0.38823529410000002" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvz-Io-aSf">
+                            <rect key="frame" x="141.5" y="0.0" width="131" height="19"/>
+                            <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="12"/>
+                            <state key="normal" title="REST TIME">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8T-oc-Mhk">
+                            <rect key="frame" x="282.5" y="0.0" width="131.5" height="19"/>
+                            <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="12"/>
+                            <state key="normal" title="AMRAP">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.95686274509803915" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="8do-EB-T7F" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="AZN-KO-z3Z"/>
+                <constraint firstItem="8do-EB-T7F" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="C3D-fF-ffV"/>
+                <constraint firstItem="gXJ-uk-OCk" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="OCh-a9-ota"/>
+                <constraint firstItem="8do-EB-T7F" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="S3I-Ct-RUX"/>
+                <constraint firstItem="8do-EB-T7F" firstAttribute="top" secondItem="IOV-F6-hIM" secondAttribute="bottom" constant="3" id="TPH-PL-GAR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gXJ-uk-OCk" secondAttribute="bottom" constant="92" id="hTz-pO-FVO"/>
+                <constraint firstItem="IOV-F6-hIM" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="i5z-vd-KAL"/>
+                <constraint firstItem="IOV-F6-hIM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rL0-ba-nx4"/>
+                <constraint firstItem="IOV-F6-hIM" firstAttribute="top" secondItem="gXJ-uk-OCk" secondAttribute="bottom" constant="10" id="wSI-gf-EVG"/>
+                <constraint firstItem="gXJ-uk-OCk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="y9z-DF-yzx"/>
+                <constraint firstItem="gXJ-uk-OCk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="zyk-HP-MpF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="IOV-F6-hIM" id="Mwe-fi-EsG"/>
+                <outlet property="exerciseText" destination="uKg-fX-PQF" id="Evw-Hk-yAN"/>
+                <outlet property="repsLabel" destination="9Wp-jr-LuV" id="yjh-Q4-iKQ"/>
+                <outlet property="setsLabel" destination="tm7-H7-8VN" id="M0c-Yc-KdN"/>
+                <outlet property="weightLabel" destination="xRX-td-915" id="UQS-Hr-X0s"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="138.95089285714286"/>
+        </view>
+    </objects>
+</document>

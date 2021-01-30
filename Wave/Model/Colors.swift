@@ -13,4 +13,6 @@ struct Colors {
     public static var orange: UIColor = UIColor(red:0.85, green:0.58, blue:0.01, alpha:1.0)
     public static var green: UIColor = UIColor(red:0.00, green:0.73, blue:0.00, alpha:1.0)
     public static var purple: UIColor = UIColor(red:0.39, green:0.18, blue:1.00, alpha:1.0)
+    public static var lightWhite: UIColor = UIColor(red:0.89, green:0.92, blue:0.92, alpha:1.0)
+    public static var testBlue: UIColor = UIColor(red:0.29, green:0.61, blue:0.93, alpha:1.0)
 }

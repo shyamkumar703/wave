@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Floaty
 
 class ViewController: UIViewController {
     @IBOutlet weak var workoutButton: UIButton!
@@ -24,6 +25,8 @@ class ViewController: UIViewController {
     var tableViewSrc: [TVCell] = []
     
     var dashboardVM: DashboardViewModel = DashboardViewModel()
+    
+    var floaty = Floaty()
     
     var selected: SelectedButton = .dashboard {
         didSet {
@@ -78,6 +81,36 @@ class ViewController: UIViewController {
         }
         
         selectedButton = dashboardButton
+        
+        floaty.buttonColor = Colors.waveBlue
+        floaty.plusColor = .white
+        let floatyTap = UITapGestureRecognizer(target: self, action: #selector(floatyTapped))
+        floaty.addGestureRecognizer(floatyTap)
+        view.addSubview(floaty)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        floaty.removeFromSuperview()
+        floaty = Floaty()
+        floaty.buttonColor = Colors.waveBlue
+        floaty.plusColor = .white
+        let floatyTap = UITapGestureRecognizer(target: self, action: #selector(floatyTapped))
+        floaty.addGestureRecognizer(floatyTap)
+        view.addSubview(floaty)
+    }
+    
+    @objc func floatyTapped() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+        UIView.animate(withDuration: 0.1, animations: {
+            self.floaty.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        }, completion: {fin in
+            UIView.animate(withDuration: 0.1, animations: {
+                self.floaty.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }, completion: {fin in
+                self.performSegue(withIdentifier: "addWorkout", sender: self)
+            })
+        })
     }
     
     func getScoreboardView() -> Scoreboard {

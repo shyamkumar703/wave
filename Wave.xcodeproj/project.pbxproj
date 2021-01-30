@@ -36,6 +36,14 @@
 		0173AA5A25C281E9002BBC57 /* progressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0173AA5925C281E9002BBC57 /* progressCell.xib */; };
 		0197755225BFD603009AAC14 /* thisWeek.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0197755125BFD603009AAC14 /* thisWeek.xib */; };
 		0197755A25BFD612009AAC14 /* thisWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0197755925BFD612009AAC14 /* thisWeek.swift */; };
+		01A260D325C5F25C0032E27E /* addExerciseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A260D225C5F25C0032E27E /* addExerciseView.xib */; };
+		01A260D825C5FF040032E27E /* selectorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A260D725C5FF040032E27E /* selectorCollectionViewCell.xib */; };
+		01BB9D2F25C48BE400BA6DA5 /* designWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BB9D2E25C48BE400BA6DA5 /* designWorkoutViewController.swift */; };
+		01BB9D3425C48C4F00BA6DA5 /* exerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BB9D3325C48C4F00BA6DA5 /* exerciseTableViewCell.swift */; };
+		01BB9D3925C48C6000BA6DA5 /* exerciseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BB9D3825C48C6000BA6DA5 /* exerciseTableViewCell.xib */; };
+		01BB9D3F25C4BB0500BA6DA5 /* addWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BB9D3E25C4BB0500BA6DA5 /* addWorkoutViewController.swift */; };
+		01BB9D4725C50D7600BA6DA5 /* selectorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BB9D4625C50D7600BA6DA5 /* selectorCollectionViewCell.swift */; };
+		01BB9D4C25C5F13700BA6DA5 /* addExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BB9D4B25C5F13700BA6DA5 /* addExerciseView.swift */; };
 		01C0A12225C09E9D0063058F /* finWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C0A12125C09E9D0063058F /* finWorkoutTableViewCell.swift */; };
 		1FA64C6AD0BEE7DA3EAEF362 /* Pods_Wave_WaveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324FFCA0FC6426FF025D6A45 /* Pods_Wave_WaveUITests.framework */; };
 		84F5ED6C576E24AF469FE447 /* Pods_Wave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B996BED5FAF00EFFE7316E2C /* Pods_Wave.framework */; };
@@ -95,6 +103,14 @@
 		0173AA5925C281E9002BBC57 /* progressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = progressCell.xib; sourceTree = "<group>"; };
 		0197755125BFD603009AAC14 /* thisWeek.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = thisWeek.xib; sourceTree = "<group>"; };
 		0197755925BFD612009AAC14 /* thisWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thisWeek.swift; sourceTree = "<group>"; };
+		01A260D225C5F25C0032E27E /* addExerciseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addExerciseView.xib; sourceTree = "<group>"; };
+		01A260D725C5FF040032E27E /* selectorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = selectorCollectionViewCell.xib; sourceTree = "<group>"; };
+		01BB9D2E25C48BE400BA6DA5 /* designWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = designWorkoutViewController.swift; sourceTree = "<group>"; };
+		01BB9D3325C48C4F00BA6DA5 /* exerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exerciseTableViewCell.swift; sourceTree = "<group>"; };
+		01BB9D3825C48C6000BA6DA5 /* exerciseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = exerciseTableViewCell.xib; sourceTree = "<group>"; };
+		01BB9D3E25C4BB0500BA6DA5 /* addWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addWorkoutViewController.swift; sourceTree = "<group>"; };
+		01BB9D4625C50D7600BA6DA5 /* selectorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectorCollectionViewCell.swift; sourceTree = "<group>"; };
+		01BB9D4B25C5F13700BA6DA5 /* addExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addExerciseView.swift; sourceTree = "<group>"; };
 		01C0A12125C09E9D0063058F /* finWorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finWorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		142688308AAFC14122DFCABA /* Pods-WaveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveTests.release.xcconfig"; path = "Target Support Files/Pods-WaveTests/Pods-WaveTests.release.xcconfig"; sourceTree = "<group>"; };
 		1911101779D07D25272BEE0A /* Pods-Wave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave.release.xcconfig"; path = "Target Support Files/Pods-Wave/Pods-Wave.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +212,8 @@
 				016DFB5725BFCFF100EB8E9F /* Fonts */,
 				016DFB2125BFCD4C00EB8E9F /* AppDelegate.swift */,
 				016DFB2325BFCD4C00EB8E9F /* SceneDelegate.swift */,
+				01BB9D3D25C4BAEA00BA6DA5 /* Add Exercise View */,
+				01BB9D2D25C48BCE00BA6DA5 /* Design Workout View */,
 				0197755025BFD59B009AAC14 /* Dashboard View */,
 				016DFB2725BFCD4C00EB8E9F /* Main.storyboard */,
 				016DFB2D25BFCD4F00EB8E9F /* Assets.xcassets */,
@@ -273,6 +291,28 @@
 				015F161025C08C930033C521 /* Table View */,
 			);
 			path = "Dashboard View";
+			sourceTree = "<group>";
+		};
+		01BB9D2D25C48BCE00BA6DA5 /* Design Workout View */ = {
+			isa = PBXGroup;
+			children = (
+				01BB9D2E25C48BE400BA6DA5 /* designWorkoutViewController.swift */,
+				01BB9D3325C48C4F00BA6DA5 /* exerciseTableViewCell.swift */,
+				01BB9D3825C48C6000BA6DA5 /* exerciseTableViewCell.xib */,
+			);
+			path = "Design Workout View";
+			sourceTree = "<group>";
+		};
+		01BB9D3D25C4BAEA00BA6DA5 /* Add Exercise View */ = {
+			isa = PBXGroup;
+			children = (
+				01BB9D3E25C4BB0500BA6DA5 /* addWorkoutViewController.swift */,
+				01A260D225C5F25C0032E27E /* addExerciseView.xib */,
+				01BB9D4625C50D7600BA6DA5 /* selectorCollectionViewCell.swift */,
+				01A260D725C5FF040032E27E /* selectorCollectionViewCell.xib */,
+				01BB9D4B25C5F13700BA6DA5 /* addExerciseView.swift */,
+			);
+			path = "Add Exercise View";
 			sourceTree = "<group>";
 		};
 		80B45A9FE96871021845C0C3 /* Frameworks */ = {
@@ -409,14 +449,17 @@
 				0173AA4225C10F2B002BBC57 /* totalWorkoutCollectionViewCell.xib in Resources */,
 				0173AA3325C10EEF002BBC57 /* totalWorkouts.xib in Resources */,
 				016DFB3125BFCD4F00EB8E9F /* LaunchScreen.storyboard in Resources */,
+				01A260D325C5F25C0032E27E /* addExerciseView.xib in Resources */,
 				0197755225BFD603009AAC14 /* thisWeek.xib in Resources */,
 				016DFB5925BFCFFB00EB8E9F /* Como-Bold.ttf in Resources */,
 				016DFB6825BFD01800EB8E9F /* Como-SemiBold.ttf in Resources */,
+				01A260D825C5FF040032E27E /* selectorCollectionViewCell.xib in Resources */,
 				016DFB5E25BFD00600EB8E9F /* Como-Light.ttf in Resources */,
 				0173AA5A25C281E9002BBC57 /* progressCell.xib in Resources */,
 				0173AA4725C23951002BBC57 /* finWorkoutNib.xib in Resources */,
 				016DFB6325BFD01000EB8E9F /* Como-Medium.ttf in Resources */,
 				015F161C25C096160033C521 /* prevWorkout.xib in Resources */,
+				01BB9D3925C48C6000BA6DA5 /* exerciseTableViewCell.xib in Resources */,
 				016DFB2E25BFCD4F00EB8E9F /* Assets.xcassets in Resources */,
 				016DFB2925BFCD4C00EB8E9F /* Main.storyboard in Resources */,
 			);
@@ -546,18 +589,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BB9D2F25C48BE400BA6DA5 /* designWorkoutViewController.swift in Sources */,
 				0173AA2D25C0C068002BBC57 /* barCollectionViewCell.swift in Sources */,
 				0173AA3D25C10F1A002BBC57 /* totalWorkoutCollectionViewCell.swift in Sources */,
 				016DFB2C25BFCD4C00EB8E9F /* Wave.xcdatamodeld in Sources */,
 				01C0A12225C09E9D0063058F /* finWorkoutTableViewCell.swift in Sources */,
 				015F161225C08CA60033C521 /* prevWorkoutTableViewCell.swift in Sources */,
 				0197755A25BFD612009AAC14 /* thisWeek.swift in Sources */,
+				01BB9D3425C48C4F00BA6DA5 /* exerciseTableViewCell.swift in Sources */,
 				010EBD0425C28FAE00A898FA /* DashboardViewModel.swift in Sources */,
+				01BB9D4725C50D7600BA6DA5 /* selectorCollectionViewCell.swift in Sources */,
 				0173AA5225C281DD002BBC57 /* progressCell.swift in Sources */,
+				01BB9D3F25C4BB0500BA6DA5 /* addWorkoutViewController.swift in Sources */,
 				016DFB6D25BFD23D00EB8E9F /* Colors.swift in Sources */,
 				015F161725C0960E0033C521 /* prevWorkout.swift in Sources */,
 				0173AA4C25C23A22002BBC57 /* finWorkoutNib.swift in Sources */,
 				016DFB2625BFCD4C00EB8E9F /* ViewController.swift in Sources */,
+				01BB9D4C25C5F13700BA6DA5 /* addExerciseView.swift in Sources */,
 				016DFB2225BFCD4C00EB8E9F /* AppDelegate.swift in Sources */,
 				016DFB2425BFCD4C00EB8E9F /* SceneDelegate.swift in Sources */,
 				0173AA3825C10EFF002BBC57 /* totalWorkouts.swift in Sources */,
