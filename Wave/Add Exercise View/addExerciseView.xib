@@ -42,7 +42,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="qLu-Nt-yue">
                             <rect key="frame" x="0.0" y="150.5" width="414" height="73"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wp-jr-LuV">
+                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wp-jr-LuV">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
                                     <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="40"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -53,7 +53,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="pac-IN-J3t">
                             <rect key="frame" x="0.0" y="233.5" width="414" height="97.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="135" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRX-td-915">
+                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="135" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRX-td-915">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="97.5"/>
                                     <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="40"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -85,20 +85,29 @@
                             <state key="normal" title="SETS &amp; REPS">
                                 <color key="titleColor" red="0.0039215686269999999" green="0.38823529410000002" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="bottomButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="4zv-JF-xh0"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvz-Io-aSf">
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvz-Io-aSf">
                             <rect key="frame" x="141.5" y="0.0" width="131" height="19"/>
                             <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="12"/>
                             <state key="normal" title="REST TIME">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="bottomButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="A10-7E-NTR"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8T-oc-Mhk">
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8T-oc-Mhk">
                             <rect key="frame" x="282.5" y="0.0" width="131.5" height="19"/>
                             <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="12"/>
                             <state key="normal" title="AMRAP">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="bottomButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="rD4-6N-Yit"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
@@ -120,9 +129,14 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="amrapButton" destination="H8T-oc-Mhk" id="xjK-3h-UBv"/>
+                <outlet property="bottomStack" destination="pac-IN-J3t" id="duE-Hh-9N3"/>
                 <outlet property="collectionView" destination="IOV-F6-hIM" id="Mwe-fi-EsG"/>
                 <outlet property="exerciseText" destination="uKg-fX-PQF" id="Evw-Hk-yAN"/>
+                <outlet property="fullStack" destination="gXJ-uk-OCk" id="tYv-AP-29E"/>
                 <outlet property="repsLabel" destination="9Wp-jr-LuV" id="yjh-Q4-iKQ"/>
+                <outlet property="restButton" destination="Gvz-Io-aSf" id="fO3-XE-aqU"/>
+                <outlet property="setsButton" destination="nk4-7T-VIF" id="jN9-sY-lfz"/>
                 <outlet property="setsLabel" destination="tm7-H7-8VN" id="M0c-Yc-KdN"/>
                 <outlet property="weightLabel" destination="xRX-td-915" id="UQS-Hr-X0s"/>
             </connections>

@@ -23,8 +23,16 @@ class addWorkoutViewController: UIViewController {
         
         
         addNib.addViewToSuperview(addView)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(closeTapped), name: NSNotification.Name("close"), object: nil)
         // Do any additional setup after loading the view.
     }
+    
+    @objc func closeTapped() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
         addNib.setScrollView()

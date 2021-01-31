@@ -13,18 +13,29 @@ class addExercise: UIView {
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var exerciseText: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var setsButton: UIButton!
+    @IBOutlet weak var restButton: UIButton!
+    @IBOutlet weak var amrapButton: UIButton!
+    @IBOutlet var bottomStack: UIStackView!
+    @IBOutlet weak var fullStack: UIStackView!
     
     var collectionScrollView: UIScrollView? = nil
     let generator = UIImpactFeedbackGenerator(style: .light)
     
+    var selected: selectedButton = .sets
+    var labelSelected: selectedLabel = .sets
+    
+    var buttonArr: [UIButton] = []
+    
+    var intermediateBottomStack: UIStackView? = nil
+    
+    let largeAttributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.foregroundColor: Colors.waveBlue, NSAttributedString.Key.font: UIFont(name: "Como-SemiBold", size: 40) as Any]
+    let smallAttributes: [NSAttributedString.Key: Any]  = [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.4), NSAttributedString.Key.font: UIFont(name: "Como-Medium", size: 10) as Any]
+    let largeUnselected: [NSAttributedString.Key: Any] = [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.4), NSAttributedString.Key.font: UIFont(name: "Como-SemiBold", size: 40) as Any]
+    let smallSelected: [NSAttributedString.Key: Any]  = [NSAttributedString.Key.foregroundColor: Colors.waveBlue, NSAttributedString.Key.font: UIFont(name: "Como-Medium", size: 10) as Any]
+    
     
     override func awakeFromNib() {
-        let largeAttributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.foregroundColor: Colors.waveBlue, NSAttributedString.Key.font: UIFont(name: "Como-SemiBold", size: 40) as Any]
-        let smallAttributes: [NSAttributedString.Key: Any]  = [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.4), NSAttributedString.Key.font: UIFont(name: "Como-Medium", size: 10) as Any]
-        let largeUnselected: [NSAttributedString.Key: Any] = [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.4), NSAttributedString.Key.font: UIFont(name: "Como-SemiBold", size: 40) as Any]
-        let smallSelected: [NSAttributedString.Key: Any]  = [NSAttributedString.Key.foregroundColor: Colors.waveBlue, NSAttributedString.Key.font: UIFont(name: "Como-Medium", size: 10) as Any]
-
-        
         setsLabel.numberOfLines = 0
         repsLabel.numberOfLines = 0
         weightLabel.numberOfLines = 0
@@ -48,7 +59,37 @@ class addExercise: UIView {
         collectionView.layoutIfNeeded()
         collectionView.scrollToItem(at: IndexPath(item: 5000, section: 0), at: .centeredHorizontally, animated: false)
         
+        buttonArr = [setsButton, restButton, amrapButton]
+        intermediateBottomStack = bottomStack
         
+        
+        for label in [setsLabel, repsLabel, weightLabel] {
+            label?.isUserInteractionEnabled = true
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapLabel))
+            label?.addGestureRecognizer(tapGesture)
+        }
+        
+        
+        
+    }
+    
+    @objc func tapLabel(_ sender: UITapGestureRecognizer) {
+        if let label = sender.view as? UILabel {
+            if label.tag == labelSelected.rawValue {
+                return
+            } else {
+                let generator = UIImpactFeedbackGenerator(style: .medium)
+                generator.impactOccurred()
+                
+                let prevLabel = [setsLabel, repsLabel, weightLabel][labelSelected.rawValue]
+                prevLabel?.textColor = UIColor.black.withAlphaComponent(0.4)
+                
+                let newLabel = [setsLabel, repsLabel, weightLabel][label.tag]
+                newLabel?.textColor = Colors.waveBlue
+                
+                labelSelected = selectedLabel.caseFromRawValue(label.tag)
+            }
+        }
     }
     
     func setupToolbar() {
@@ -80,10 +121,87 @@ class addExercise: UIView {
     }
     
     @objc func closeTapped() {
-        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "close"), object: nil, userInfo: nil)
     }
     
     @objc func doneTapped() {
+    }
+
+    @IBAction func bottomButtonTapped(_ sender: Any) {
+        if let button = sender as? UIButton {
+            switch button.tag {
+            case 0:
+                if selected.rawValue == 0 {
+                    return
+                } else {
+                    switchButton(0)
+                }
+            case 1:
+                if selected.rawValue == 1 {
+                    return
+                } else {
+                    switchButton(1)
+                    switchToRest()
+                }
+            case 2:
+                if selected.rawValue == 2 {
+                    return
+                } else {
+                    switchButton(2)
+                }
+            default:
+                return
+            }
+        }
+    }
+    
+    func switchButton(_ tag: Int) {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+        let prevSelected = buttonArr[selected.rawValue]
+        prevSelected.setTitleColor(UIColor.black.withAlphaComponent(0.4), for: .normal)
+        let currSelected = buttonArr[tag]
+        currSelected.setTitleColor(Colors.waveBlue, for: .normal)
+        
+        if selected.rawValue == 1 {
+            switchFromRest()
+        }
+        
+        selected = selectedButton.caseFromRawValue(tag)
+        
+        switch tag {
+        case 0:
+            return
+        case 1:
+            return
+        case 2:
+            switchToAmrap()
+        default:
+            return
+        }
+    }
+    
+    func switchToRest() {
+        bottomStack.removeFromSuperview()
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.layoutIfNeeded()
+        })
+    }
+    
+    func switchToAmrap() {
+        if labelSelected.rawValue != 1 {
+            repsLabel.attributedText = generateAttributedString("AMRAP", largeUnselected, "\nREPS", smallAttributes)
+        } else {
+            repsLabel.attributedText = generateAttributedString("AMRAP", largeAttributes, "\nREPS", smallSelected)
+        }
+    }
+    
+    func switchFromRest() {
+        fullStack.addArrangedSubview(bottomStack)
+        UIView.animate(withDuration: 0.3, animations: {
+            self.layoutIfNeeded()
+        })
     }
     
     /*
@@ -101,6 +219,28 @@ class addExercise: UIView {
         return attString1
     }
 
+}
+
+enum selectedButton: Int {
+    case sets = 0
+    case restTime = 1
+    case amrap = 2
+    
+    static func caseFromRawValue(_ rawValue: Int) -> selectedButton {
+        let choices = [selectedButton.sets, selectedButton.restTime, selectedButton.amrap]
+        return choices[rawValue]
+    }
+}
+
+enum selectedLabel : Int {
+    case sets = 0
+    case reps = 1
+    case weight = 2
+    
+    static func caseFromRawValue(_ rawValue: Int) -> selectedLabel {
+        let choices = [selectedLabel.sets, selectedLabel.reps, selectedLabel.weight]
+        return choices[rawValue]
+    }
 }
 
 extension addExercise: UICollectionViewDelegate, UICollectionViewDataSource {
