@@ -11,6 +11,9 @@ class exerciseTableViewCell: UITableViewCell {
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var muscleGroupsStack: UIStackView!
     @IBOutlet weak var chestLabel: UILabel!
+    @IBOutlet weak var exerciseRest: UILabel!
+    @IBOutlet weak var exerciseName: UILabel!
+    @IBOutlet weak var stringDesc: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +31,12 @@ class exerciseTableViewCell: UITableViewCell {
         chestLabel.layer.masksToBounds = true
         chestLabel.layer.cornerRadius = 5
         chestLabel.backgroundColor = Colors.purple.withAlphaComponent(0.15)
+    }
+    
+    func setup(_ exercise: AddedExercise) {
+        exerciseName.text = exercise.exercise
+        stringDesc.text = "\(exercise.sets) SETS · \(exercise.reps) REPS · \(exercise.weight) LBS"
+        exerciseRest.text = "\(exercise.getRestBetweenSetsString()) REST"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

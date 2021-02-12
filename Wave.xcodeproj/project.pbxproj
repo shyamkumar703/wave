@@ -34,6 +34,8 @@
 		0173AA4C25C23A22002BBC57 /* finWorkoutNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173AA4B25C23A22002BBC57 /* finWorkoutNib.swift */; };
 		0173AA5225C281DD002BBC57 /* progressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173AA5125C281DD002BBC57 /* progressCell.swift */; };
 		0173AA5A25C281E9002BBC57 /* progressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0173AA5925C281E9002BBC57 /* progressCell.xib */; };
+		0182A4AB25C7AC100072EB44 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182A4AA25C7AC100072EB44 /* Exercise.swift */; };
+		0182A4B025C7C5810072EB44 /* DesignWorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182A4AF25C7C5810072EB44 /* DesignWorkoutViewModel.swift */; };
 		0197755225BFD603009AAC14 /* thisWeek.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0197755125BFD603009AAC14 /* thisWeek.xib */; };
 		0197755A25BFD612009AAC14 /* thisWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0197755925BFD612009AAC14 /* thisWeek.swift */; };
 		01A260D325C5F25C0032E27E /* addExerciseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A260D225C5F25C0032E27E /* addExerciseView.xib */; };
@@ -101,6 +103,8 @@
 		0173AA4B25C23A22002BBC57 /* finWorkoutNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finWorkoutNib.swift; sourceTree = "<group>"; };
 		0173AA5125C281DD002BBC57 /* progressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progressCell.swift; sourceTree = "<group>"; };
 		0173AA5925C281E9002BBC57 /* progressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = progressCell.xib; sourceTree = "<group>"; };
+		0182A4AA25C7AC100072EB44 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		0182A4AF25C7C5810072EB44 /* DesignWorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignWorkoutViewModel.swift; sourceTree = "<group>"; };
 		0197755125BFD603009AAC14 /* thisWeek.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = thisWeek.xib; sourceTree = "<group>"; };
 		0197755925BFD612009AAC14 /* thisWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thisWeek.swift; sourceTree = "<group>"; };
 		01A260D225C5F25C0032E27E /* addExerciseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addExerciseView.xib; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				016DFB6C25BFD23D00EB8E9F /* Colors.swift */,
+				0182A4AA25C7AC100072EB44 /* Exercise.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 				01BB9D2E25C48BE400BA6DA5 /* designWorkoutViewController.swift */,
 				01BB9D3325C48C4F00BA6DA5 /* exerciseTableViewCell.swift */,
 				01BB9D3825C48C6000BA6DA5 /* exerciseTableViewCell.xib */,
+				0182A4AF25C7C5810072EB44 /* DesignWorkoutViewModel.swift */,
 			);
 			path = "Design Workout View";
 			sourceTree = "<group>";
@@ -594,12 +600,14 @@
 				0173AA3D25C10F1A002BBC57 /* totalWorkoutCollectionViewCell.swift in Sources */,
 				016DFB2C25BFCD4C00EB8E9F /* Wave.xcdatamodeld in Sources */,
 				01C0A12225C09E9D0063058F /* finWorkoutTableViewCell.swift in Sources */,
+				0182A4AB25C7AC100072EB44 /* Exercise.swift in Sources */,
 				015F161225C08CA60033C521 /* prevWorkoutTableViewCell.swift in Sources */,
 				0197755A25BFD612009AAC14 /* thisWeek.swift in Sources */,
 				01BB9D3425C48C4F00BA6DA5 /* exerciseTableViewCell.swift in Sources */,
 				010EBD0425C28FAE00A898FA /* DashboardViewModel.swift in Sources */,
 				01BB9D4725C50D7600BA6DA5 /* selectorCollectionViewCell.swift in Sources */,
 				0173AA5225C281DD002BBC57 /* progressCell.swift in Sources */,
+				0182A4B025C7C5810072EB44 /* DesignWorkoutViewModel.swift in Sources */,
 				01BB9D3F25C4BB0500BA6DA5 /* addWorkoutViewController.swift in Sources */,
 				016DFB6D25BFD23D00EB8E9F /* Colors.swift in Sources */,
 				015F161725C0960E0033C521 /* prevWorkout.swift in Sources */,

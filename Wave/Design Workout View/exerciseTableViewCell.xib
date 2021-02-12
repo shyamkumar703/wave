@@ -65,7 +65,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bench Press" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryc-ey-ZiE">
                             <rect key="frame" x="0.0" y="0.0" width="398" height="19.5"/>
                             <fontDescription key="fontDescription" name="Como-SemiBold" family="Como" pointSize="20"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 SETS · 5 REPS · 135 LBS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkI-r3-be7">
@@ -95,7 +95,10 @@
             <connections>
                 <outlet property="backView" destination="vU2-LU-fe4" id="Rxb-Mv-p29"/>
                 <outlet property="chestLabel" destination="TIk-2H-lrF" id="eRy-gO-EbF"/>
+                <outlet property="exerciseName" destination="Ryc-ey-ZiE" id="aAG-bS-4px"/>
+                <outlet property="exerciseRest" destination="Yqd-bG-SBz" id="d2g-fO-EMp"/>
                 <outlet property="muscleGroupsStack" destination="xwx-KR-Hzd" id="e5w-Cd-oVB"/>
+                <outlet property="stringDesc" destination="UkI-r3-be7" id="j0e-Si-QWJ"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="138.95089285714286"/>
         </view>

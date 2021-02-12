@@ -25,14 +25,20 @@ class addExercise: UIView {
     var selected: selectedButton = .sets
     var labelSelected: selectedLabel = .sets
     
+    var lastContentOffset: CGPoint = CGPoint(x: 0, y: 0)
+    
     var buttonArr: [UIButton] = []
     
     var intermediateBottomStack: UIStackView? = nil
+    
+    var viewModel: DesignWorkoutViewModel? = nil
     
     let largeAttributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.foregroundColor: Colors.waveBlue, NSAttributedString.Key.font: UIFont(name: "Como-SemiBold", size: 40) as Any]
     let smallAttributes: [NSAttributedString.Key: Any]  = [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.4), NSAttributedString.Key.font: UIFont(name: "Como-Medium", size: 10) as Any]
     let largeUnselected: [NSAttributedString.Key: Any] = [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.4), NSAttributedString.Key.font: UIFont(name: "Como-SemiBold", size: 40) as Any]
     let smallSelected: [NSAttributedString.Key: Any]  = [NSAttributedString.Key.foregroundColor: Colors.waveBlue, NSAttributedString.Key.font: UIFont(name: "Como-Medium", size: 10) as Any]
+    
+    var currentExercise: AddedExercise = AddedExercise()
     
     
     override func awakeFromNib() {
@@ -40,9 +46,9 @@ class addExercise: UIView {
         repsLabel.numberOfLines = 0
         weightLabel.numberOfLines = 0
         
-        setsLabel.attributedText = generateAttributedString("5", largeAttributes, "\nSETS", smallSelected)
-        repsLabel.attributedText = generateAttributedString("5", largeUnselected, "\nREPS", smallAttributes)
-        weightLabel.attributedText = generateAttributedString("135", largeUnselected, "\nLBS", smallAttributes)
+        setSets()
+        setReps()
+        setWeight()
         
         exerciseText.becomeFirstResponder()
         exerciseText.attributedPlaceholder = NSAttributedString(string: "Bench press",
@@ -69,8 +75,34 @@ class addExercise: UIView {
             label?.addGestureRecognizer(tapGesture)
         }
         
+        exerciseText.text = currentExercise.exercise
         
         
+        
+    }
+    
+    func setSets() {
+        if labelSelected == .sets {
+            setsLabel.attributedText = generateAttributedString("\(currentExercise.sets)", largeAttributes, "\nSETS", smallSelected)
+        } else {
+            setsLabel.attributedText = generateAttributedString("\(currentExercise.sets)", largeUnselected, "\nSETS", smallAttributes)
+        }
+    }
+    
+    func setReps() {
+        if labelSelected == .reps {
+            repsLabel.attributedText = generateAttributedString("\(currentExercise.reps)", largeAttributes, "\nREPS", smallSelected)
+        } else {
+            repsLabel.attributedText = generateAttributedString("\(currentExercise.reps)", largeUnselected, "\nREPS", smallAttributes)
+        }
+    }
+    
+    func setWeight() {
+        if labelSelected == .weight {
+            weightLabel.attributedText = generateAttributedString("\(currentExercise.weight)", largeAttributes, "\nLBS", smallAttributes)
+        } else {
+            weightLabel.attributedText = generateAttributedString("\(currentExercise.weight)", largeUnselected, "\nLBS", smallAttributes)
+        }
     }
     
     @objc func tapLabel(_ sender: UITapGestureRecognizer) {
@@ -101,12 +133,16 @@ class addExercise: UIView {
         
         let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         
+        let weightUp = UIBarButtonItem(title: "+ 0.5 LBS", style: .plain, target: self, action: #selector(weightUpPressed))
+        weightUp.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Como-Medium", size: 17) as Any], for: .normal)
+        
         let checkImage = UIImage(systemName: "checkmark")?.withTintColor(.white)
         let done = UIBarButtonItem(image: checkImage, style: .plain, target: self, action: #selector(doneTapped))
         
         newBar.tintColor = .white
         done.tintColor = .white
-        bar.items = [newBar, space, done]
+        weightUp.tintColor = .white
+        bar.items = [newBar, space, weightUp, space, done]
         bar.sizeToFit()
         exerciseText.inputAccessoryView = bar
     }
@@ -120,11 +156,27 @@ class addExercise: UIView {
         }
     }
     
+    @objc func weightUpPressed() {
+        currentExercise.weight += 0.5
+        setWeight()
+    }
+    
     @objc func closeTapped() {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "close"), object: nil, userInfo: nil)
     }
     
     @objc func doneTapped() {
+        if exerciseText.text != nil {
+            currentExercise.exercise = exerciseText.text!
+        }
+        
+        if viewModel!.exercises.keys.contains(currentExercise.id) {
+            viewModel!.exercises[currentExercise.id] = currentExercise
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "close"), object: nil, userInfo: nil)
+            return
+        }
+        viewModel!.exercises[currentExercise.id] = currentExercise
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "close"), object: nil, userInfo: nil)
     }
 
     @IBAction func bottomButtonTapped(_ sender: Any) {
@@ -135,6 +187,7 @@ class addExercise: UIView {
                     return
                 } else {
                     switchButton(0)
+                    switchToSets()
                 }
             case 1:
                 if selected.rawValue == 1 {
@@ -148,6 +201,7 @@ class addExercise: UIView {
                     return
                 } else {
                     switchButton(2)
+                    switchToAmrap()
                 }
             default:
                 return
@@ -182,6 +236,23 @@ class addExercise: UIView {
     }
     
     func switchToRest() {
+        let setsStr = currentExercise.getRestBetweenSetsString()
+        let exercisesStr = currentExercise.getRestBetweenExercises()
+        
+        if labelSelected == .sets {
+            setsLabel.attributedText = generateAttributedString(setsStr, largeAttributes, "\nBETWEEN SETS", smallSelected)
+        } else {
+            setsLabel.attributedText = generateAttributedString(setsStr, largeUnselected, "\nBETWEEN SETS", smallAttributes)
+        }
+        
+        if labelSelected == .reps {
+            repsLabel.attributedText = generateAttributedString(exercisesStr, largeAttributes, "\nBETWEEN EXERCISES", smallSelected)
+        } else {
+            repsLabel.attributedText = generateAttributedString(exercisesStr, largeUnselected, "\nBETWEEN EXERCISES", smallAttributes)
+        }
+        
+        
+        
         bottomStack.removeFromSuperview()
         
         UIView.animate(withDuration: 0.3, animations: {
@@ -190,6 +261,9 @@ class addExercise: UIView {
     }
     
     func switchToAmrap() {
+        setSets()
+        setWeight()
+        currentExercise.amrap = true
         if labelSelected.rawValue != 1 {
             repsLabel.attributedText = generateAttributedString("AMRAP", largeUnselected, "\nREPS", smallAttributes)
         } else {
@@ -202,6 +276,13 @@ class addExercise: UIView {
         UIView.animate(withDuration: 0.3, animations: {
             self.layoutIfNeeded()
         })
+    }
+    
+    func switchToSets() {
+        exerciseText.text = currentExercise.exercise
+        setSets()
+        setReps()
+        setWeight()
     }
     
     /*
@@ -257,10 +338,94 @@ extension addExercise: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if collectionScrollView != nil {
+            let add = collectionScrollView!.contentOffset.x > lastContentOffset.x
+            let generator = UIImpactFeedbackGenerator(style: .light)
+            generator.impactOccurred()
             if indexPath.row % 4 == 0 {
-                generator.impactOccurred()
+                switch selected {
+                case .sets:
+                    switch labelSelected {
+                    case .sets:
+                        if add {
+                            currentExercise.sets += 1
+                        } else {
+                            if currentExercise.sets >= 2 {
+                                currentExercise.sets -= 1
+                            }
+                        }
+                        setSets()
+                    case .reps:
+                        if add {
+                            currentExercise.reps += 1
+                        } else {
+                            if currentExercise.reps >= 2 {
+                                currentExercise.reps -= 1
+                            }
+                        }
+                        setReps()
+                    case .weight:
+                        if add {
+                            currentExercise.weight += 1
+                        } else {
+                            if currentExercise.weight >= 2 {
+                                currentExercise.weight -= 1
+                            }
+                        }
+                        setWeight()
+                    }
+                case .amrap:
+                    switch labelSelected {
+                    case .sets:
+                        if add {
+                            currentExercise.sets += 1
+                        } else {
+                            if currentExercise.sets >= 2 {
+                                currentExercise.sets -= 1
+                            }
+                        }
+                        setSets()
+                    case .reps:
+                        return
+                    case .weight:
+                        if add {
+                            currentExercise.weight += 1
+                        } else {
+                            if currentExercise.weight >= 2 {
+                                currentExercise.weight -= 1
+                            }
+                        }
+                        setWeight()
+                    }
+                case .restTime:
+                    switch labelSelected {
+                    case .sets:
+                        if add {
+                            currentExercise.restBetweenSets += 1
+                        } else {
+                            if currentExercise.restBetweenSets >= 2 {
+                                currentExercise.restBetweenSets -= 1
+                            }
+                        }
+                        switchToRest()
+                    case .reps:
+                        if add {
+                            currentExercise.restBetweenExercises += 1
+                        } else {
+                            if currentExercise.restBetweenExercises >= 2 {
+                                currentExercise.restBetweenExercises -= 1
+                            }
+                        }
+                        switchToRest()
+                    case .weight:
+                        return
+                    }
+                }
             }
         }
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        lastContentOffset = scrollView.contentOffset
     }
     
     

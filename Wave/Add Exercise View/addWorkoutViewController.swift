@@ -14,6 +14,10 @@ class addWorkoutViewController: UIViewController {
     
     let screenKeyboardDict = [667: 280, 736: 291, 896: 366, 812: 356, 844: 356, 926: 366, 568: 280]
     
+    var viewModel: DesignWorkoutViewModel? = nil
+    
+    var currExercise: AddedExercise? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +27,9 @@ class addWorkoutViewController: UIViewController {
         
         
         addNib.addViewToSuperview(addView)
+        addNib.viewModel = viewModel
+        addNib.currentExercise = currExercise ?? AddedExercise()
+        addNib.switchToSets()
         
         NotificationCenter.default.addObserver(self, selector: #selector(closeTapped), name: NSNotification.Name("close"), object: nil)
         // Do any additional setup after loading the view.

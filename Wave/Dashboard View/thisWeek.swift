@@ -19,7 +19,7 @@ class thisWeek: UIView {
         let greenStringAttributes = [NSAttributedString.Key.foregroundColor: Colors.green]
         let orangeStringAttributes = [NSAttributedString.Key.foregroundColor: Colors.orange]
         let blackStringAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        var tenString = NSMutableAttributedString(string: "10", attributes: orangeStringAttributes)
+        let tenString = NSMutableAttributedString(string: "10", attributes: orangeStringAttributes)
         let tenString2 = NSMutableAttributedString(string: "10", attributes: orangeStringAttributes)
         let fiveString = NSMutableAttributedString(string: "5", attributes: greenStringAttributes)
         
